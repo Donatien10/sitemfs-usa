@@ -1024,4 +1024,38 @@
 
 
 
+  .image-slider {
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+  }
   
+  .image-slider img {
+    width: 200px; /* adapte selon ta taille */
+    margin-right: 10px;
+    animation: slideMove 10s linear infinite;
+  }
+  
+  @keyframes slideMove {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  .image-slider img {
+    width: 200px;
+    margin-right: 10px;
+    animation: pulseZoom 3s ease-in-out infinite;
+  }
+  
+  @keyframes pulseZoom {
+    0%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+  }
+    
